@@ -1,0 +1,13 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - "lts/*"
+
+before_script:
+  - npm i npm@latest -g
+  - npm install -g --silent @angular/cli@7.3.9
+
+script:
+  - ng lint
+  - npm run build
